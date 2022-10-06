@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Banco">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="147dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="304dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_Ingresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingresar Dinero" />
+
+        <RadioButton
+            android:id="@+id/rb_Retirar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Retirar Dinero" />
+
+        <RadioButton
+            android:id="@+id/rb_Salir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salir" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Bienvenido al Banco"
+        app:layout_constraintBottom_toTopOf="@+id/tv_VerSaldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <EditText
+        android:id="@+id/etn_Retirar"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="292dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etn_Registrar"
+        android:layout_width="173dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/etn_Retirar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:onClick="procesar"
+        android:text="Ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etn_Retirar"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <TextView
+        android:id="@+id/tv_VerSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="20dp"
+        android:text="Aqui se mostrará tu saldo"
+        app:layout_constraintBottom_toTopOf="@+id/etn_Registrar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_verSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Saldo"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
